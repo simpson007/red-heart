@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>red heart</title>
+</head>
+<style>
+    *{
+        margin:0;padding: 0;box-sizing: border-box;
+    }
+    .heart {
+        display: inline-block;
+        position:relative;
+        margin: 50px;
+        /* transition: all 1s ease; */
+        animation: .5s heart infinite alternate-reverse ;
+    }
+    @keyframes heart {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1.5);
+        }
+    }
+    /* .heart:hover {
+        transform: scale(1.5); 
+    }*/
+    .left {
+        width: 50px;
+        height: 50px;
+        background: red;
+        position: absolute;
+        bottom: 50px;
+        left: -50px;
+        transform: rotate(45deg) translateX(36px);
+        border-radius:  50% 0 0 50%;
+    }
+    .right {
+        width: 50px;
+        height: 50px;
+        background: red;
+        position: absolute;
+        bottom: 50px;
+        right: -50px;
+        transform: rotate(45deg) translateY(36px) ;
+        border-radius:  50% 50% 0 0  ;
+    }
+    .bottom {
+        width: 50px;
+        height: 50px;
+        background: red;
+        transform: rotate(45deg);
+    }
+</style>
+<body>
+    <div class="heart">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>
